@@ -11,14 +11,6 @@ body {
     color: #fff;
 }
 
-.box {
-    height: 350px;
-    width: 790px;
-    background-color: rgba(17, 52, 70, .95);
-    border-radius: 10px;
-    font-family: "Montserrat", "SkyFont", sans-serif;
-}
-
 p {
     margin-top: 0px;
     font-size: 25px;
@@ -29,13 +21,37 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    justify-content: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+    width: 790px;
+    background-color: rgba(17, 52, 70, .95);
+    border-radius: 10px;
+    font-family: "Montserrat", "SkyFont", sans-serif;
 }
 
 .main-img {
     position: absolute;
-    margin-left: 460px;
+    margin-left: 90%;
     margin-top: 14px;
+}
+
+.input {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 #fingerprint {
@@ -45,12 +61,6 @@ form {
     margin-left: 8px;
 }
 
-button {
-    cursor: pointer;
-}
-
-
-
 .title {
     font-size: 47px;
     text-align: center;
@@ -59,6 +69,7 @@ button {
 }
 
 .field {
+    width: 100%;
     padding-left: 30px;
     font-size: 18px;
     margin-bottom: 15px;
@@ -72,7 +83,6 @@ button {
     background-color: #3a4e5a;
     border-color: #fff;
     height: 47px;
-    max-width: 60%;
     width: 100%;
     border-radius: 50px;
     color: #fff;
@@ -81,7 +91,7 @@ button {
 .btn {
     border-width: 0px;
     height: 58px;
-    min-width: 250px;
+    width: 250px;
     font-size: 17px;
 }
 
@@ -90,7 +100,81 @@ button {
 }
 
 #btn-right{
-    
     color:#788B96;
     background-color: #2c5167;
+
+}
+.buttons{
+    display: flex; 
+    flex-direction: row; 
+    gap: 8px;
+    width: 100%;
+}
+
+.version {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+@media (max-width: 800px){
+    .box {
+        height: 320px;
+        width: 98%;
+    }
+    .title {
+        font-size: 2.5em;
+        font-weight: 600;
+        margin-top: 30px;
+    }
+    .instruction {
+        font-size: 1.2em;
+        letter-spacing: .041em;
+    }
+}
+
+@media (max-width: 580px){
+    .form-box {
+        height: 180px;
+        width: 98%;
+    }
+    
+    .instruction {
+        font-size: .8em;
+        letter-spacing: .041em;
+    }
+
+    .main-img {
+        margin-left: 89%;
+    }
+
+    .title {
+        font-size: 2em;
+        font-weight: 600;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 400px){
+    .title {
+        font-size: 1.6em;
+    }
+
+    .instruction{
+        font-size: .7em;
+    }
+
+    .main-img {
+        margin-left: 87%;
+    }
+
+    .box {
+        height: 330px;
+    }
+
+    #fingerprint {
+        margin-left: 4px;
+    }
 }
